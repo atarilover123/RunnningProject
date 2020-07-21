@@ -16,7 +16,7 @@ String dnames[] = {
 boolean saveim = false;
 
 void setup() {
-  size(displayWidth, displayHeight);
+  size(1100,750);
   background(0);
 
   reset();
