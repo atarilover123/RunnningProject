@@ -10,8 +10,8 @@ int i = 0;
 int tlength; 
 
 String dnames[] = {
-  "g0517", "g0521", "g0524", "g0528", "g0503"
-};
+   "GP0503", "GP0517", "GP0521", "GP0524", "GP0528", 
+  "GP0531", "GP0706", "GP0708", "GP0709"};
 
 void setup() {
   size(800, 800, P3D);
@@ -41,6 +41,7 @@ void draw() {
 
     float x = map(lon, lonmin, lonmax, 100, width-100); 
     float y = map (lat, latmax, latmin, 100, width-100);
+    
     stroke(255);
 
     point(x, y);
@@ -48,6 +49,7 @@ void draw() {
     lx = x;
     ly= y;
   }
+  text();
 }
 
 float latmin;
@@ -57,7 +59,7 @@ float lonmin;
 float lonmax; 
 
 int ri = 0;
-int gi = 0;
+int gi = -1;
 
 //function to get maximum and minimum lon/lat values 
 //and redraw plot
@@ -74,8 +76,6 @@ void reset() {
   for (TableRow row : table.rows ()) {
     ri++;
     ri = ri%tlength;
-    float latsel = row.getFloat("lat");
-    float lonsel = row.getFloat("lon");
 
     lonarray[ri] = row.getFloat("lon");
 
@@ -112,3 +112,8 @@ void mouseReleased() {
   reset();
 }
 
+void text(){
+  textAlign(CENTER);
+    textSize(25);
+  text(dnames[gi], width/2, 50);
+}

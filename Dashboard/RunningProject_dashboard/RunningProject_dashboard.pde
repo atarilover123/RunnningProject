@@ -8,15 +8,15 @@ Table table;
 int i = 0;
 int tlength; 
 String dnames[] = {
-  "t0517", "t0521", "t0524", "t0528", "t0529"
-};
+  "TC0503", "TC0517", "TC0521", "TC0524", "TC0528", "TC0529", 
+  "TC0531", "TC0706", "TC0708", "TC0709"};
 
 //true = save data image
 //false = don't save data image
 boolean saveim = false;
 
 void setup() {
-  size(1100,750);
+  size(1100, 750);
   background(0);
 
   reset();
@@ -78,7 +78,7 @@ void draw() {
   text();
 }
 
-int gi = 0; 
+int gi = -1; 
 
 //Function to load new dataset from array
 void reset() {
@@ -91,13 +91,16 @@ void reset() {
 }
 
 void mouseReleased() {
-  if(saveim == true){
-  save(dnames[gi]+".jpg");}
+  if (saveim == true) {
+    save(dnames[gi]+".jpg");
+  }
   reset();
 }
 
 //function to write headings
 void text() {
+  textAlign(LEFT);
+  textSize(13);
   pushMatrix();
   translate(10, 50);
   text("Heartrate", 0, 0);
@@ -114,5 +117,8 @@ void text() {
   translate(10, height/2+190);
   text("Cadence", 0, 0);
   popMatrix();
-}
 
+textAlign(CENTER);
+  textSize(25);
+  text(dnames[gi], width/2, 50);
+}
