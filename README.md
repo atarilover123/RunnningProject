@@ -4,6 +4,8 @@
 Documentation of code, sound and image created by Dan Tapper as part of "Thoughts, Running" a project with Juliet Palmer and Sonja Rainey.
 Running data from Anthony Thompson.
 
+<img src="https://raw.githubusercontent.com/atarilover123/RunnningProject/master/Images/TC0531.jpg" width="70%"> 
+
 #### <a href="https://github.com/atarilover123/RunnningProject/blob/master/PD%20Party%20data%20gathering%20app/PD%20Party%20connect.pdf">Recording Data</a>  
 Custom app to record iPhone GPS, accelerometer, gyroscope and capacitive touch built using Pure Data and ported to IOS using the app PD Party. The app outputs txt and csv files.
 
@@ -25,6 +27,10 @@ A number of tools built using MaxMSP to convert running data into audio and midi
 
 #### <a href = "https://github.com/atarilover123/RunnningProject/tree/master/Soundgestures">Audio Examples</a>
 Sounds created using different visualisation processes.
+
+
+
+
 
 
 
